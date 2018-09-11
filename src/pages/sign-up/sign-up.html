@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar color="green">
+    <ion-title>signUp</ion-title>
+     <ion-buttons end>
+      <button ion-button icon-only (click)="back()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content" padding>
+   <div class="profile-image">
+            <img src="{{imageurl}}">
+          </div>
+          <div class="div1">
+            <button ion-button round class="create-btn" outline style="float:middle" (click)="chooseimage()">Choose an image</button>
+          </div>
+
+     
+          
+  <ion-item   class="ion-Items">
+    <ion-label style="color:white"  stacked>email:</ion-label>
+    <ion-input  type="email" palceholder="email address" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item  class="ion-Items">
+    <ion-label  style="color:white" stacked>password:</ion-label>
+    <ion-input  type="password" palceholder="password here" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <button ion-button full  class="create-btn" (click)="signUp()">sign up</button>
+</ion-content>

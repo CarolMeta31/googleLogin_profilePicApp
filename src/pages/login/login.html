@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="green" >
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="login-content" >
+    <div class="login-box">
+  <ion-item class="ion-Items">
+    <ion-label style="color:white" stacked> <ion-icon name="mail"></ion-icon> email:</ion-label>
+    <ion-input  type="email"  [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item class="ion-Items">
+    <ion-label  style="color:white" stacked> <ion-icon name="lock"></ion-icon> password:</ion-label>
+    <ion-input   type="password"  [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <button ion-button full style="color:yellowgreen" class="login-btn" (click)="signIn()">Log in</button>
+</div>
+  
+  
+  <ion-list>
+
+      <button ion-button icon-left style="color:yellowgreen" block clear class="btn"  (click)="loginWithGoogle()">
+        <ion-icon name="logo-google"></ion-icon>
+        Log in with Google
+      </button>
+
+      <button ion-button icon-left block clear  style="color:yellowgreen" class="btn"  (click)="SignUp()">
+        <ion-icon name="person-add"></ion-icon>
+        Sign up
+      </button>
+    </ion-list>
+ 
+  <div class="login-footer">
+      <p>
+        <!-- <a href="#" style="color:white"  (click)="forgetPassword()">Forgot password?</a> -->
+        If you're a new user, please sign up.
+      </p>
+    </div>
+
+</ion-content>
